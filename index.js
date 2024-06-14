@@ -8,6 +8,7 @@ import express from 'express';
 import { port } from './config/environment.js';
 
 import exhibitionRouter from './controllers/exhibition.js'
+import authRouter from './controllers/auth.js'
 
 
 const app = express();
@@ -15,6 +16,7 @@ const app = express();
 app.use(express.json());
 
 app.use('/gallery', exhibitionRouter)
+app.use('/auth', authRouter)
 
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = dirname(__filename);
