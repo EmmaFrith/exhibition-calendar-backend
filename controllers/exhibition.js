@@ -1,5 +1,6 @@
 import express from 'express'
 import Exhibition from '../models/exhibition.js'
+import secureRoute from '../middleware/secureRoute.js'
 
 
 const router = express.Router()
@@ -9,8 +10,6 @@ router.get('/', async (req, res, next) => {
 
     const exhibitions = await Exhibition.find();
     return res.status(200).json(exhibitions)
-
-    console.log(exhibitions)
 
 })
 
@@ -23,7 +22,7 @@ router.post('/', async (req, res, next) => {
 })
 
 //SHOW PAGE
-router.get('/:exhibitionId', async (req, res, next) => {
+router.get('/gallery/:exhibitionId', async (req, res, next) => {
 
     const { exhibitionId } = req.params;
 
@@ -34,7 +33,7 @@ router.get('/:exhibitionId', async (req, res, next) => {
 })
 
 //EDIT EXHIBITION
-router.put('/:exhibitionId', async (req, res, next) => {
+router.put('/gallery/:exhibitionId', async (req, res, next) => {
 
     const { exhibitionId } = req.params;
 
@@ -49,7 +48,7 @@ router.put('/:exhibitionId', async (req, res, next) => {
 })
 
 //DELETE EXHIBITION
-router.delete('/:exhibitionId', async (req, res, next) => {
+router.delete('/gallery/:exhibitionId', async (req, res, next) => {
 
     const { exhibitionId } = req.params;
 
