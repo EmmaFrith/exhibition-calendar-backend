@@ -1,7 +1,7 @@
-import Exhibition from "../models/exhibition";
-import User from "../models/user";
+import Exhibition from "../models/exhibition.js";
+import User from "../models/user.js";
 import { connectToDb, truncateDb, disconnectDb } from './helpers.js'
-import exhibitionData from "./data/exhibition-data";
+import exhibitionData from "./data/exhibition-data.js";
 
 async function seed() {
     try {

@@ -1,5 +1,4 @@
 import mongoose from 'mongoose'
-import mongooseUniqueValidator from 'mongoose-unique-validator'
 
 const commentSchema = new mongoose.Schema({
     text: { type: String, required: true, maxlength: 200 },
