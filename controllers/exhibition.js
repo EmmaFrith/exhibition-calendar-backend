@@ -14,4 +14,14 @@ router.get('/', async (req, res, next) => {
 })
 
 
+router.post('/', async (req, res, next) => {
+
+    const createExhibition = await Exhibition.create(req.body);
+    return res.status(201).json(createExhibition)
+
+})
+
+
+
+
 export default router
