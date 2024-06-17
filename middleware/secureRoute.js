@@ -10,7 +10,7 @@ export default async function secureRoute(req, res, next) {
         
         //check token exists
         if (!rawToken) {
-            throw new Error;
+            console.log("NOT RAW TOKEN")
         };
 
         //Remove the word "bearer from token"
@@ -23,7 +23,9 @@ export default async function secureRoute(req, res, next) {
         // ! 3) Reading any info from token before moving on
         const user = await User.findById(payload.userId);
 
-        if (!user) throw new Error
+        if (!user) {
+            console.log("NOT USER")
+        }
 
         // Make this object available to the next middleware
         res.locals.currentUser = user
