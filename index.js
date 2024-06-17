@@ -16,9 +16,9 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/', exhibitionRouter)
-app.use('/auth', authRouter)
-app.use('/user', userRouter)
+app.use('/api', exhibitionRouter)
+app.use('/api/auth', authRouter)
+app.use('/api/user', userRouter)
 
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = dirname(__filename);
