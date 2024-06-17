@@ -16,7 +16,7 @@ router.post('/signup', async (req, res, next) => {
         //check password/conf
 
         if (req.body.password !== req.body.passwordConfirmation) {
-            throw new Error
+            console.log('PASSWORDS DO NOTMATCH')
         }
 
         // ! 2) hash password
