@@ -7,22 +7,21 @@ const router = express.Router()
 
 //GET PLANNER
 
-router.get('/:userId', secureRoute, async (req, res, next) => {
+router.get('/:userId', async (req, res, next) => {
 
-    const currentUser = res.locals.currentUser
-    const userInDb = await User.findById(currentUser).populate('savedExhibitions')
-    console.log(userInDb.savedExhibitions)
-    return res.status(200)
+    const { userId } = req.params;
+    const userInDb = await User.findById(userId).populate('savedExhibitions')
+    return res.status(200).json(userInDb)
 
 })
 
 //ADD EXHIBITION TO PLANNER
 
-router.post('/:userId/:exhibitionId', secureRoute, async (req, res, next) => {
+router.post('/:userId/:exhibitionId', async (req, res, next) => {
 
     const { exhibitionId } = req.params;
-    const currentUser = res.locals.currentUser
-    const userInDb = await User.findById(currentUser)
+    const { userId } = req.params;
+    const userInDb = await User.findById(userId)
     userInDb.savedExhibitions.push(exhibitionId)
     await userInDb.save()
     return res.status(200).json(userInDb)
@@ -32,5 +31,15 @@ router.post('/:userId/:exhibitionId', secureRoute, async (req, res, next) => {
 
 //DELETE EXHIBITION FROM PLANNER
 
+router.delete('/:userId/:exhibitionId', async (req, res, next) => {
+
+    const { exhibitionId } = req.params;
+    const { userId } = req.params;
+    const userInDb = await User.findById(userId)
+    userInDb.savedExhibitions.pull(exhibitionId)
+    await userInDb.save()
+    return res.status(200).json(userInDb)
+
+})
 
 export default router
