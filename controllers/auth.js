@@ -61,6 +61,7 @@ router.post('/signin', async (req, res, next) => {
             {
                 username: user.username,
                 userId: user._id,
+                isAdmin: user.isAdmin
             }, 
         //imported above from config/environment.js file
             secret,
