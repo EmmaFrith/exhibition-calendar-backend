@@ -13,6 +13,24 @@ router.get('/', async (req, res, next) => {
 
 })
 
+//PAGINATED BACKEND ATTEMPT
+router.get('/PLACEHOLDER', async (req, res, next) => {
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 9;
+
+    const skip = (page - 1) * limit;
+
+    const exhibitions = await Exhibition.find()
+        .skip(skip)
+        .limit(limit);
+
+    const totalExhibitions = await Exhibition.countDocuments();
+
+    const totalPages = Math.ceil(totalExhibitions / limit);
+
+    res.status(200).json({ exhibitions, totalPages });
+});
+
 //CREATE EXHIBITION
 router.post('/', async (req, res, next) => {
 

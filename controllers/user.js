@@ -28,7 +28,8 @@ router.post('/:userId/:exhibitionId', async (req, res, next) => {
     await userInDb.save()
     return res.status(200).json(userInDb)
     } else {
-        console.log("This exhibition is already in your planner!")
+        // console.log("This exhibition is already in your planner!")
+        return res.status(400).json({ message: "Exhibition already in planner" });
     }
 
 })
