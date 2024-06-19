@@ -12,6 +12,18 @@ export default [
         recommended: false,
     },
     {
+        exhibitionTitle: "Nathanaëlle Herbelin",
+        artists: "Nathanaëlle Herbelin",
+        startDate: "12 March 2024",
+        endDate: "30 June 2024",
+        location: "Paris",
+        museum: "Musée d'Orsay",
+        image: "https://cdn.mediatheque.epmoo.fr/link/3c9igq/ilm1armh3v9id40.jpg",
+        movement: "Modern",
+        price: "Free",
+        recommended: false,
+    },
+    {
         exhibitionTitle: "There Is Light Somewhere",
         artists: "Tavares Strachan",
         startDate: "18 June 2024",
