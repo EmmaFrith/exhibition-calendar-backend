@@ -19,6 +19,7 @@ const exhibitionSchema = new mongoose.Schema({
     movement: { type: String, required: false },
     price: { type: String, required: false },
     recommended: { type: Boolean, default: false },
+    description: { type: String, required: false },
     comments: [commentSchema],
 })
 

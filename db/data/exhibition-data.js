@@ -9,6 +9,7 @@ export default [
         image: "https://www.nationalgallery.org.uk/media/x0pf2rlm/the-last-caravaggio-ng200-homepage-600x600px-1.jpg",
         movement: "Renaissance",
         price: "Paid",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         recommended: false,
     },
     {
@@ -21,6 +22,7 @@ export default [
         image: "https://cdn.mediatheque.epmoo.fr/link/3c9igq/ilm1armh3v9id40.jpg",
         movement: "Modern",
         price: "Free",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         recommended: false,
     },
     {
@@ -33,6 +35,7 @@ export default [
         image: "https://www.newexhibitions.com/uploads/a/1/large/6645fc8978fb7.png",
         movement: "Sculpture",
         price: "Free",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         recommended: false,
     },
     {
@@ -45,6 +48,7 @@ export default [
         image: "https://www.newexhibitions.com/uploads/6/4/large/6645ea778e33c.jpeg",
         movement: "Evolution of Japanese Printmaking",
         price: "Paid",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         recommended: false,
     },
     {
@@ -57,6 +61,7 @@ export default [
         image: "https://www.newexhibitions.com/uploads/7/e/large/6637b0075cca3.jpeg",
         movement: "Contemporary",
         price: "Paid",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         recommended: false,
     },
     {
@@ -69,6 +74,7 @@ export default [
         image: "https://www.newexhibitions.com/uploads/4/e/large/666eef1238b1e.png",
         movement: "Post-minimalism",
         price: "Paid",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         recommended: false,
     },
     {
@@ -81,6 +87,7 @@ export default [
         image: "https://www.newexhibitions.com/uploads/8/6/large/6666d2d451626.png",
         movement: "Contemporary",
         price: "Free",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         recommended: false,
     },
     {
@@ -93,6 +100,7 @@ export default [
         image: "https://www.centrepompidou.fr/fileadmin/_processed_/e/2/csm_prog_exposition_brancusi-2_ec5a6a971e.jpg",
         movement: "Modern Sculpture",
         price: "Free",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         recommended: false,
     },
     {
@@ -105,6 +113,7 @@ export default [
         image: "https://cdn.mediatheque.epmoo.fr/link/3c9igq/skr1an4w4i5f6yo.jpg",
         movement: "Impressionism",
         price: "Paid",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         recommended: false,
     },
 ]
