@@ -9,44 +9,48 @@ router.get('/:userId', async (req, res, next) => {
     try {
         const { userId } = req.params;
         const userInDb = await User.findById(userId).populate('savedExhibitions')
-        return res.status(200).json(userInDb) 
+        return res.status(200).json(userInDb)
     } catch (error) {
         console.log(error)
-        res.status(500).send(error)
+        res.status(400).send(error)
     }
 })
 
 //ADD EXHIBITION TO PLANNER
-
 router.post('/:userId/:exhibitionId', async (req, res, next) => {
-
-    const { exhibitionId } = req.params;
-    const { userId } = req.params;
-    const userInDb = await User.findById(userId)
-    const exhibInDb = userInDb.savedExhibitions.includes(exhibitionId);
-    if (exhibInDb === false) {
-    userInDb.savedExhibitions.push(exhibitionId)
-    await userInDb.save()
-    return res.status(200).json(userInDb)
-    } else {
-        // console.log("This exhibition is already in your planner!")
-        return res.status(400).json({ message: "Exhibition already in planner" });
+    try {
+        const { exhibitionId } = req.params;
+        const { userId } = req.params;
+        const userInDb = await User.findById(userId)
+        const exhibInDb = userInDb.savedExhibitions.includes(exhibitionId);
+        if (exhibInDb === false) {
+            userInDb.savedExhibitions.push(exhibitionId)
+            await userInDb.save()
+            return res.status(200).json(userInDb)
+        } else {
+            console.log("This exhibition is already in your planner!")
+            return res.status(400).json({ message: "Exhibition already in planner" });
+        }
+    } catch (error) {
+        console.log(error)
+        res.status(400).send(error)
     }
-
 })
 
 
 //DELETE EXHIBITION FROM PLANNER
-
 router.delete('/:userId/:exhibitionId', async (req, res, next) => {
-
-    const { exhibitionId } = req.params;
-    const { userId } = req.params;
-    const userInDb = await User.findById(userId)
-    userInDb.savedExhibitions.pull(exhibitionId)
-    await userInDb.save()
-    return res.status(200).json(userInDb)
-
+    try {
+        const { exhibitionId } = req.params;
+        const { userId } = req.params;
+        const userInDb = await User.findById(userId)
+        userInDb.savedExhibitions.pull(exhibitionId)
+        await userInDb.save()
+        return res.status(200).json(userInDb)
+    } catch (error) {
+        console.log(error)
+        res.status(400).send(error)
+    }
 })
 
 export default router
