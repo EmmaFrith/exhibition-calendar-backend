@@ -4,15 +4,16 @@ import secureRoute from '../middleware/secureRoute.js'
 
 const router = express.Router()
 
-
 //GET PLANNER
-
 router.get('/:userId', async (req, res, next) => {
-
-    const { userId } = req.params;
-    const userInDb = await User.findById(userId).populate('savedExhibitions')
-    return res.status(200).json(userInDb)
-
+    try {
+        const { userId } = req.params;
+        const userInDb = await User.findById(userId).populate('savedExhibitions')
+        return res.status(200).json(userInDb) 
+    } catch (error) {
+        console.log(error)
+        res.status(500).send(error)
+    }
 })
 
 //ADD EXHIBITION TO PLANNER

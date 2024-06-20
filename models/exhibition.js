@@ -9,17 +9,17 @@ const commentSchema = new mongoose.Schema({
 
 
 const exhibitionSchema = new mongoose.Schema({
-    exhibitionTitle: { type: String, required: false },
-    artists: { type: String, required: false },
-    startDate: { type: String, required: false },
-    endDate: { type: String, required: false },
-    location: { type: String, required: false },
-    museum: { type: String, required: false },
-    image: { type: String, required: false },
-    movement: { type: String, required: false },
-    price: { type: String, required: false },
-    recommended: { type: Boolean, default: false },
-    description: { type: String, required: false },
+    exhibitionTitle: { type: String, required: true, minlength: 2 },
+    artists: { type: String, required: true, minlength: 2 },
+    startDate: { type: String, required: true, minlength: 2 },
+    endDate: { type: String, required: true, minlength: 2 },
+    location: { type: String, required: true, minlength: 2 },
+    museum: { type: String, required: true, minlength: 2 },
+    image: { type: String, required: true, minlength: 2 },
+    movement: { type: String, required: true, minlength: 2 },
+    price: { type: String, required: true, minlength: 2 },
+    recommended: { type: Boolean, default: true },
+    description: { type: String, required: true, minlength: 2 },
     comments: [commentSchema],
 })
 
