@@ -45,7 +45,9 @@ router.post('/signin', async (req, res, next) => {
         )
         if (!passwordsMatch) {
             console.log("PASSWORDS DONT MATCH")
+            // return res.status(401).json({ message: 'Something went wrong - try again.' });
         }
+
         // ! Create token to send back
         const token = jwt.sign(
             //public payload
