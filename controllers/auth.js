@@ -30,6 +30,11 @@ router.post('/signup', async (req, res, next) => {
 
 router.post('/signin', async (req, res, next) => {
     try {
+        const { email, password } = req.body;
+        // Validate email and password presence
+        if (!email || !password) {
+            return res.status(422).json({ message: 'Email and password are required' });
+        }
         const user = await User.findOne({ email: req.body.email })
         if (!user) {
             console.log("NOT USER")
