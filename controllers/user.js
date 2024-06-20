@@ -9,6 +9,9 @@ router.get('/:userId', async (req, res, next) => {
     try {
         const { userId } = req.params;
         const userInDb = await User.findById(userId).populate('savedExhibitions')
+        if (!userInDb) {
+            return res.status(404).json({ message: 'Not Found' })
+        }
         return res.status(200).json(userInDb)
     } catch (error) {
         console.log(error)
