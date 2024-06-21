@@ -5,9 +5,6 @@ import { connectToDb } from '../../db/helpers.js';
 import express from 'express';
 
 
-import { dbURL, port } from '../../config/environment.js'; // Import path fixed
-
-
 
 import exhibitionRouter from '../../controllers/exhibition.js';
 
